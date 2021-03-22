@@ -1,0 +1,60 @@
+﻿@page
+@model veic_web.Pages.Articles.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Article</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Article.Id" />
+            <div class="form-group">
+                <label asp-for="Article.Type_id" class="control-label"></label>
+                <select asp-for="Article.Type_id" class="form-control" asp-items="ViewBag.Type_id"></select>
+                <span asp-validation-for="Article.Type_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Article.Lang_id" class="control-label"></label>
+                <input asp-for="Article.Lang_id" class="form-control" />
+                <span asp-validation-for="Article.Lang_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Article.Title" class="control-label"></label>
+                <input asp-for="Article.Title" class="form-control" />
+                <span asp-validation-for="Article.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Article.Slug" class="control-label"></label>
+                <input asp-for="Article.Slug" class="form-control" />
+                <span asp-validation-for="Article.Slug" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Article.Body" class="control-label"></label>
+                <textarea asp-for="Article.Body" class="form-control" rows="16"></textarea>
+                <span asp-validation-for="Article.Body" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Article.Pubdate" class="control-label"></label>
+                <input asp-for="Article.Pubdate" class="form-control" />
+                <span asp-validation-for="Article.Pubdate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

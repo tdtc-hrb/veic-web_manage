@@ -5,15 +5,15 @@ date: 2021-03-23T12:08:08+08:00
 ---
 
 # Create project
-![Project 1](20210323080348.png)
-![Project 2](20210323081111.png)
+![Project 1](https://raw.githubusercontent.com/tdtc-hrb/veic-web_manage/master/Docs/20210323080348.png)
+![Project 2](https://raw.githubusercontent.com/tdtc-hrb/veic-web_manage/master/Docs/20210323081111.png)
 
 ## Set Namespace
-![Project 3](20210323081325.png)
+![Project 3](https://raw.githubusercontent.com/tdtc-hrb/veic-web_manage/master/Docs/20210323081325.png)
 
 # Models
 Create Models and Data folders.
-![Project 4](20210323081652.png)
+![Project 4](https://raw.githubusercontent.com/tdtc-hrb/veic-web_manage/master/Docs/20210323081652.png)
 
 Install Pagakes:
 ```bash
@@ -24,14 +24,13 @@ Install-Package MySql.EntityFrameworkCore -Version 5.0.0
 ## DB Context
 add class
 > add -> New Item
-![Project 5](20210323081902.png)
+![Project 5](https://raw.githubusercontent.com/tdtc-hrb/veic-web_manage/master/Docs/20210323081902.png)
 Implement DbContext:
 ```c#
 public class CarnumberDbContext : DbContext
 {
     public CarnumberDbContext(DbContextOptions<CarnumberDbContext> options) : base(options)
     {
-
     }
 }
 ```
@@ -83,16 +82,16 @@ public DbSet<User> Users { get; set; }
 
 ## Users
 Create a new folder in Pages and name it "Users".
-![project 6](20210323083910.png)
+![project 6](https://raw.githubusercontent.com/tdtc-hrb/veic-web_manage/master/Docs/20210323083910.png)
 
 right click,
 ```bash
 Add -> Razor Page -> Razor Pages using Entity Framework(CRUD)
 ```
-![project 7](20210323084309.png)
+![project 7](https://raw.githubusercontent.com/tdtc-hrb/veic-web_manage/master/Docs/20210323084309.png)
 
 # Link
-> _Layout.cshtml
+> Shared/_Layout.cshtml
 
 ```html
 <li class="nav-item">

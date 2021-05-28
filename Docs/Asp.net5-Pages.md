@@ -17,8 +17,8 @@ Create Models and Data folders.
 
 Install Pagakes:
 ```bash
-Install-Package Microsoft.EntityFrameworkCore -Version 5.0.4
-Install-Package MySql.EntityFrameworkCore -Version 5.0.0
+Install-Package Microsoft.EntityFrameworkCore -Version 5.0.6
+Install-Package MySql.EntityFrameworkCore -Version 5.0.3.1
 ```
 
 ## DB Context
